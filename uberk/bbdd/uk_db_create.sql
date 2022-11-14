@@ -13,8 +13,7 @@ CREATE TABLE uk_availability (
     end_time varchar(45)  NOT NULL,
     tx_date timestamp  NOT NULL,
     tx_username varchar(100)  NOT NULL,
-    tx_host varchar(400)  NOT NULL,
-    CONSTRAINT uk_availability_pk PRIMARY KEY (availability_id)
+    tx_host varchar(400)  NOT NULL
 );
 
 -- Table: uk_car
@@ -69,8 +68,7 @@ CREATE TABLE uk_destiny_coordinate (
     status boolean  NOT NULL,
     tx_date timestamp  NOT NULL,
     tx_username varchar(100)  NOT NULL,
-    tx_host varchar(400)  NOT NULL,
-    CONSTRAINT uk_coordinate_pk PRIMARY KEY (destiny_coordinate_id)
+    tx_host varchar(400)  NOT NULL
 );
 
 -- Table: uk_driver
@@ -534,14 +532,6 @@ ALTER TABLE uk_role_group ADD CONSTRAINT uk_role_group_uk_group
 ALTER TABLE uk_role_group ADD CONSTRAINT uk_role_group_uk_role
     FOREIGN KEY (role_id)
     REFERENCES uk_role (role_id)  
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE
-;
-
--- Reference: uk_travel_detail_uk_travel (table: uk_travel_detail)
-ALTER TABLE uk_travel_detail ADD CONSTRAINT uk_travel_detail_uk_travel
-    FOREIGN KEY (uk_travel_travel_id)
-    REFERENCES uk_travel (travel_id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
