@@ -1,0 +1,19 @@
+Creando repo en docker:
+
+docker run --name uk_soft -e POSTGRES_PASSWORD=uk_pass -p 5432:5432 -d postgres:14.5
+
+para ver el codigo de los contenedores: 
+docker ps
+
+Para la bd:
+docker exec -it 670ef73dcb bash
+nota: no es necesario todo el codigo con los 5 primeros caracteres esta bien
+
+Dentro del bash de postgres:
+su - postgres
+psql
+\c template1
+CREATE DATABASE uk_soft;
+\c bd_soft
+copiarquery
+
