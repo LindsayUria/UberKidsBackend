@@ -392,8 +392,7 @@ CREATE TABLE uk_travel (
     status boolean  NOT NULL,
     tx_date timestamp  NOT NULL,
     tx_username varchar(100)  NOT NULL,
-    tx_host varchar(400)  NOT NULL,
-    CONSTRAINT uk_travel_pk PRIMARY KEY (travel_id)
+    tx_host varchar(400)  NOT NULL
 );
 
 -- Table: uk_travel_detail
@@ -404,9 +403,7 @@ CREATE TABLE uk_travel_detail (
     status boolean  NOT NULL,
     tx_date timestamp  NOT NULL,
     tx_username varchar(100)  NOT NULL,
-    tx_host varchar(400)  NOT NULL,
-    uk_travel_travel_id int  NOT NULL,
-    CONSTRAINT uk_travel_detail_pk PRIMARY KEY (travel_detail_id)
+    tx_host varchar(400)  NOT NULL
 );
 
 -- Table: uk_travel_status
@@ -417,8 +414,7 @@ CREATE TABLE uk_travel_status (
     status boolean  NOT NULL,
     tx_date timestamp  NOT NULL,
     tx_username varchar(100)  NOT NULL,
-    tx_host varchar(400)  NOT NULL,
-    CONSTRAINT uk_travel_status_pk PRIMARY KEY (travel_status_id)
+    tx_host varchar(400)  NOT NULL
 );
 
 -- Table: uk_type_car
