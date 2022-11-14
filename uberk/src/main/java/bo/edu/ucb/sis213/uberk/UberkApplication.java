@@ -2,6 +2,7 @@ package bo.edu.ucb.sis213.uberk;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-//@MapperScan("bo.edu.ucb.sis213")
+//@MapperScan("bo.edu.ucb.sis213.uberk.dao")
 public class UberkApplication {
 
 	@Bean
