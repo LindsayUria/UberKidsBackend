@@ -138,3 +138,14 @@ select user_id, user_name, name, last_name, password, email, phone,status, tx_da
     tx_username, tx_host
 from
     uk_user;
+
+SELECT role.role_id, role.name, role.description, role.status, role.tx_username, role.tx_host, role.tx_date
+FROM uk_role role
+         JOIN uk_role_group role_group ON role_group.role_id = role.role_id
+         JOIN uk_group_user group_user ON group_user.group_id = role_group.group_id
+         JOIN uk_user usr ON usr.user_id = group_user.user_id
+WHERE
+  role.status = true
+  AND role_group.status = true
+  AND group_user.status = true
+  AND usr.status = true;
