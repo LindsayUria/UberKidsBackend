@@ -132,3 +132,9 @@ insert into uk_group_user (group_user_id, user_id, group_id, status, tx_date, tx
 insert into uk_group_user (group_user_id, user_id, group_id, status, tx_date, tx_username, tx_host) values (28, 7, 1, false, '2020-11-24', 'vkondratenyar', '100.22.235.79');
 insert into uk_group_user (group_user_id, user_id, group_id, status, tx_date, tx_username, tx_host) values (29, 22, 3, false, '2019-04-06', 'sstanbras', '36.199.15.249');
 insert into uk_group_user (group_user_id, user_id, group_id, status, tx_date, tx_username, tx_host) values (30, 13, 2, true, '2021-10-13', 'kfordert', '10.118.111.45');
+
+
+select user_id, user_name, name, last_name, password, email, phone,status, tx_date
+    tx_username, tx_host
+from
+    uk_user;

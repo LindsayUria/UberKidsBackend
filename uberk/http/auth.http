@@ -1,2 +1,2 @@
 ###test de autenticacion
-GET http://localhost:7777/api/v1/auth
+GET http://localhost:7777/api/v1/auth/1

@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 
-public class ukUser {
+public class UkUser {
     private Integer userId;
     private String user_name;
     private String name;
@@ -17,11 +17,11 @@ public class ukUser {
     private String txHost;
     private Date txDate;
 
-    public ukUser(){
+    public UkUser(){
 
     }
 
-    public ukUser(Integer userId, String user_name, String name, String last_name, String password, String email, String phone, Boolean status, String txUsername, String txHost, Date txDate) {
+    public UkUser(Integer userId, String user_name, String name, String last_name, String password, String email, String phone, Boolean status, String txUsername, String txHost, Date txDate) {
         this.userId = userId;
         this.user_name = user_name;
         this.name = name;
@@ -144,7 +144,7 @@ public class ukUser {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ukUser ukUser = (ukUser) o;
+        UkUser ukUser = (UkUser) o;
         return Objects.equals(userId, ukUser.userId) && Objects.equals(user_name, ukUser.user_name) && Objects.equals(name, ukUser.name) && Objects.equals(last_name, ukUser.last_name) && Objects.equals(password, ukUser.password) && Objects.equals(email, ukUser.email) && Objects.equals(phone, ukUser.phone) && Objects.equals(status, ukUser.status) && Objects.equals(txUsername, ukUser.txUsername) && Objects.equals(txHost, ukUser.txHost) && Objects.equals(txDate, ukUser.txDate);
     }
 

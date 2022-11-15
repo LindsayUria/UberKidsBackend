@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-//@MapperScan("bo.edu.ucb.sis213.uberk.dao")
+@MapperScan("bo.edu.ucb.sis213.uberk.dao")
 public class UberkApplication {
 
 	@Bean
