@@ -42,9 +42,9 @@ public interface UserDao {
 
     @Insert("""
       INSERT INTO
-       uk_user (user_name, name, last_name, password, status, tx_username, tx_host, tx_date)
+       uk_user (user_name, name, last_name, password, email, phone, status, tx_date, tx_username, tx_host)
       VALUES (
-      #{username},null,null, #{secret}, true, 'anonymous', 'localhost', now())  
+      #{username},#{name},#{last_name},#{password},#{email},#{phone}, true, now(), 'anonymous', 'localhost')  
             """)
     void createUser (UkUser ukUser);
 

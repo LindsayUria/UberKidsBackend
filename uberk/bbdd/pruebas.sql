@@ -149,3 +149,7 @@ WHERE
   AND role_group.status = true
   AND group_user.status = true
   AND usr.status = true;
+
+UPDATE uk_group_user
+SET user_id=1 , group_id=1
+WHERE group_user_id =1;

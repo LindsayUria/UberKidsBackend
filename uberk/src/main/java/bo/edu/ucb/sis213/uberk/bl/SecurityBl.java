@@ -34,7 +34,8 @@ public class SecurityBl {
         UkUser ukUser = userDao.findByPrimaryKey(userId);
         // Transformamos la entidad de Base de Datos
         // a un DTO para retornar via API  (Data Transfer Object)
-        UserDto userDto = new UserDto(ukUser.getUserId(), ukUser.getUser_name());
+        UserDto userDto = new UserDto(ukUser.getUserId(), ukUser.getUsername(), ukUser.getName()
+                , ukUser.getLast_name(),ukUser.getPassword(),ukUser.getEmail(), ukUser.getPhone());
         return userDto;
     }
 
@@ -72,7 +73,7 @@ public class SecurityBl {
     }
 
     /** Este metodo valida un token JWT y retorna un MrUser
-     * @param token
+     * @paramtoken
      * @return
      */
     public UkUser validateJwtToken(String jwt) {

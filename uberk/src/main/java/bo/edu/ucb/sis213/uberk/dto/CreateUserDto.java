@@ -1,10 +1,20 @@
 package bo.edu.ucb.sis213.uberk.dto;
 
 public class CreateUserDto {
+   // private Integer user_id;
     private String username;
-    private String secret;
+    //private String name;
+    //private String last_name;
+    private String password;
+    //private String email;
+   // private String phone;
 
     public CreateUserDto() {
+    }
+
+    public CreateUserDto(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public String getUsername() {
@@ -15,11 +25,11 @@ public class CreateUserDto {
         this.username = username;
     }
 
-    public String getSecret() {
-        return secret;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSecret(String secret) {
-        this.secret = secret;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

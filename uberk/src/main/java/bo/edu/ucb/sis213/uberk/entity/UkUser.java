@@ -13,15 +13,16 @@ public class UkUser {
     private String email;
     private String phone;
     private Boolean status;
+    private Date txDate;
     private String txUsername;
     private String txHost;
-    private Date txDate;
+
 
     public UkUser(){
 
     }
 
-    public UkUser(Integer userId, String username, String name, String last_name, String password, String email, String phone, Boolean status, String txUsername, String txHost, Date txDate) {
+    public UkUser(Integer userId, String username, String name, String last_name, String password, String email, String phone, Boolean status, Date txDate, String txUsername, String txHost) {
         this.userId = userId;
         this.username = username;
         this.name = name;
@@ -30,9 +31,9 @@ public class UkUser {
         this.email = email;
         this.phone = phone;
         this.status = status;
+        this.txDate = txDate;
         this.txUsername = txUsername;
         this.txHost = txHost;
-        this.txDate = txDate;
     }
 
     public Integer getUserId() {
@@ -43,11 +44,11 @@ public class UkUser {
         this.userId = userId;
     }
 
-    public String getUser_name() {
+    public String getUsername() {
         return username;
     }
 
-    public void setUser_name(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -99,6 +100,14 @@ public class UkUser {
         this.status = status;
     }
 
+    public Date getTxDate() {
+        return txDate;
+    }
+
+    public void setTxDate(Date txDate) {
+        this.txDate = txDate;
+    }
+
     public String getTxUsername() {
         return txUsername;
     }
@@ -115,17 +124,9 @@ public class UkUser {
         this.txHost = txHost;
     }
 
-    public Date getTxDate() {
-        return txDate;
-    }
-
-    public void setTxDate(Date txDate) {
-        this.txDate = txDate;
-    }
-
     @Override
     public String toString() {
-        return "ukUser{" +
+        return "UkUser{" +
                 "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
@@ -134,9 +135,9 @@ public class UkUser {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", status=" + status +
+                ", txDate=" + txDate +
                 ", txUsername='" + txUsername + '\'' +
                 ", txHost='" + txHost + '\'' +
-                ", txDate=" + txDate +
                 '}';
     }
 
@@ -145,11 +146,11 @@ public class UkUser {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UkUser ukUser = (UkUser) o;
-        return Objects.equals(userId, ukUser.userId) && Objects.equals(username, ukUser.username) && Objects.equals(name, ukUser.name) && Objects.equals(last_name, ukUser.last_name) && Objects.equals(password, ukUser.password) && Objects.equals(email, ukUser.email) && Objects.equals(phone, ukUser.phone) && Objects.equals(status, ukUser.status) && Objects.equals(txUsername, ukUser.txUsername) && Objects.equals(txHost, ukUser.txHost) && Objects.equals(txDate, ukUser.txDate);
+        return Objects.equals(userId, ukUser.userId) && Objects.equals(username, ukUser.username) && Objects.equals(name, ukUser.name) && Objects.equals(last_name, ukUser.last_name) && Objects.equals(password, ukUser.password) && Objects.equals(email, ukUser.email) && Objects.equals(phone, ukUser.phone) && Objects.equals(status, ukUser.status) && Objects.equals(txDate, ukUser.txDate) && Objects.equals(txUsername, ukUser.txUsername) && Objects.equals(txHost, ukUser.txHost);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, username, name, last_name, password, email, phone, status, txUsername, txHost, txDate);
+        return Objects.hash(userId, username, name, last_name, password, email, phone, status, txDate, txUsername, txHost);
     }
 }

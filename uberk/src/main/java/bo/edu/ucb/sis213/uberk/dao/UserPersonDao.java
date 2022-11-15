@@ -14,6 +14,6 @@ public interface UserPersonDao {
                 user_name = #{username}
                 AND status = true
             """)
-    public UserPerson findByUsername(String username);
+    UserPerson findByUsername(String username);
 
 }
