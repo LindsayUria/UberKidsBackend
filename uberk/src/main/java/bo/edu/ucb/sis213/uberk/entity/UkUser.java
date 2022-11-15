@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class UkUser {
     private Integer userId;
-    private String user_name;
+    private String username;
     private String name;
     private String last_name;
     private String password;
@@ -21,9 +21,9 @@ public class UkUser {
 
     }
 
-    public UkUser(Integer userId, String user_name, String name, String last_name, String password, String email, String phone, Boolean status, String txUsername, String txHost, Date txDate) {
+    public UkUser(Integer userId, String username, String name, String last_name, String password, String email, String phone, Boolean status, String txUsername, String txHost, Date txDate) {
         this.userId = userId;
-        this.user_name = user_name;
+        this.username = username;
         this.name = name;
         this.last_name = last_name;
         this.password = password;
@@ -44,11 +44,11 @@ public class UkUser {
     }
 
     public String getUser_name() {
-        return user_name;
+        return username;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUser_name(String username) {
+        this.username = username;
     }
 
     public String getName() {
@@ -127,7 +127,7 @@ public class UkUser {
     public String toString() {
         return "ukUser{" +
                 "userId=" + userId +
-                ", user_name='" + user_name + '\'' +
+                ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", password='" + password + '\'' +
@@ -145,11 +145,11 @@ public class UkUser {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UkUser ukUser = (UkUser) o;
-        return Objects.equals(userId, ukUser.userId) && Objects.equals(user_name, ukUser.user_name) && Objects.equals(name, ukUser.name) && Objects.equals(last_name, ukUser.last_name) && Objects.equals(password, ukUser.password) && Objects.equals(email, ukUser.email) && Objects.equals(phone, ukUser.phone) && Objects.equals(status, ukUser.status) && Objects.equals(txUsername, ukUser.txUsername) && Objects.equals(txHost, ukUser.txHost) && Objects.equals(txDate, ukUser.txDate);
+        return Objects.equals(userId, ukUser.userId) && Objects.equals(username, ukUser.username) && Objects.equals(name, ukUser.name) && Objects.equals(last_name, ukUser.last_name) && Objects.equals(password, ukUser.password) && Objects.equals(email, ukUser.email) && Objects.equals(phone, ukUser.phone) && Objects.equals(status, ukUser.status) && Objects.equals(txUsername, ukUser.txUsername) && Objects.equals(txHost, ukUser.txHost) && Objects.equals(txDate, ukUser.txDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, user_name, name, last_name, password, email, phone, status, txUsername, txHost, txDate);
+        return Objects.hash(userId, username, name, last_name, password, email, phone, status, txUsername, txHost, txDate);
     }
 }

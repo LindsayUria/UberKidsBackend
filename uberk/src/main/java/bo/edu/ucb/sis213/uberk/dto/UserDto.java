@@ -2,15 +2,15 @@ package bo.edu.ucb.sis213.uberk.dto;
 
 public class UserDto {
     private Integer userId;
-    private String user_name;
+    private String username;
 
     public UserDto(){
 
     }
 
-    public UserDto(Integer userId, String user_name) {
+    public UserDto(Integer userId, String username) {
         this.userId = userId;
-        this.user_name = user_name;
+        this.username = username;
     }
 
     public Integer getUserId() {
@@ -22,11 +22,11 @@ public class UserDto {
     }
 
     public String getUser_name() {
-        return user_name;
+        return username;
     }
 
     public void setUser_name(String user_name) {
-        this.user_name = user_name;
+        this.username = username;
     }
 
 
