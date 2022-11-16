@@ -20,25 +20,12 @@ public class AuthApi {
 
     @GetMapping("/{userId}")
     public UserDto test(@PathVariable(name = "userId") Integer userId){
+
         return this.securityBl.getUserByPk(userId);
     }
 
     @PostMapping()
-    public ResponseDto<AuthResDto> authentication(@RequestBody  AuthReqDto authReqDto) {
-        try {
-            Thread.sleep(3000);
-        } catch (Exception ex) {
-            // Do nothing
-        }
-        if (authReqDto != null && authReqDto.username() != null && authReqDto.password() != null) {
-            // Retorna los tokens, null (porque no hay error), true porque fue exitoso
-            try {
-                return new ResponseDto<>(securityBl.authenticate(authReqDto), null, true);
-            } catch (UberKException ex) {
-                return new ResponseDto<>(null, ex.getMessage(), false);
-            }
-        } else {
-            return new ResponseDto<>(null, "Credenciales incorrectas", false);
-        }
+    public AuthResDto authentication(@RequestBody AuthReqDto authReqDto) {
+        return securityBl.authenticate(authReqDto);
     }
 }

@@ -20,7 +20,21 @@ public class UserBl {
         this.userPersonDao = userPersonDao;
     }
 
+    public void createUser(CreateUserDto createUserDto){
+        UkUser ukUser = new UkUser();
+        ukUser.setUsername(createUserDto.getUsername());
+        ukUser.setName(createUserDto.getName());
+        ukUser.setLastname(createUserDto.getLastname());
+        String password = BCrypt.withDefaults().hashToString(12,
+                createUserDto.getPassword().toCharArray());
+        createUserDto.getPassword();
+        ukUser.setPassword(password);
+        ukUser.setEmail(createUserDto.getEmail());
+        ukUser.setPhone(createUserDto.getPhone());
+        this.userDao.createUser(ukUser);
+    }
 
+    /*
     public void createUser(CreateUserDto createUserDto) {
         UkUser ukUser = new UkUser();
         ukUser.setUsername(createUserDto.getUsername());
@@ -30,6 +44,7 @@ public class UserBl {
         ukUser.setPassword(secret);
         this.userDao.createUser(ukUser);
     }
+     */
 
 
     public UserPerson findByUsername(String username) {

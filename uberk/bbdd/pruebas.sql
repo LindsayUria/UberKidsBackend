@@ -153,3 +153,8 @@ WHERE
 UPDATE uk_group_user
 SET user_id=1 , group_id=1
 WHERE group_user_id =1;
+
+UPDATE uk_user
+SET user_name='admin1'
+WHERE user_id=1;
+

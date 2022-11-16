@@ -1,10 +1,16 @@
 package bo.edu.ucb.sis213.uberk.dto;
 
-public class AuthResDto {
-    private String token;
-    private String refresh;
+public class AuthResDto{
+    private  String token;
+    private  String refresh;
 
-    public AuthResDto() {
+    public AuthResDto(){
+
+    }
+
+    public AuthResDto(String token, String refresh) {
+        this.token = token;
+        this.refresh = refresh;
     }
 
     public String getToken() {

@@ -25,6 +25,13 @@ public class UserApi {
     }
 
     @PostMapping
+    public Map createUser(@RequestBody CreateUserDto createUserDto){
+        userBl.createUser(createUserDto);
+        return  Map.of("message","User created");
+    }
+
+    /*
+    @PostMapping
     public ResponseDto<String> createUser(@RequestHeader Map<String,String> headers, @RequestBody CreateUserDto createUserDto){
         try {
             String jwt = AuthUtil.getTokenFromHeader(headers);
