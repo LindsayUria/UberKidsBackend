@@ -29,11 +29,11 @@ public interface UserDao {
                 user_name= #{username}
                 AND status = true
             """)
-    String findByUsernameAndPassword(String username);
+    String findByPaswordByUsername(String username);
 
     @Select("""
             select user_id, user_name, name, last_name, password, email, phone,status, tx_date
-               tx_username, tx_host
+                       tx_username, tx_host
             from 
                 uk_user
             WHERE
@@ -54,9 +54,9 @@ public interface UserDao {
 
     @Insert("""
       INSERT INTO
-       uk_user (user_name, name, last_name, password, email, phone, status, tx_host, tx_date, tx_username)
+       uk_user (user_name, name, last_name, password, email, phone, status, tx_date, tx_username, tx_host)
       VALUES (
-      #{username},#{name},#{lastname},#{password},#{email},#{phone},true,'localhost',now(),'admin')  
+      #{username},#{name},#{lastname},#{password},#{email},#{phone},true,now(),'admin','localhost')  
             """)
     void createUser (UkUser ukUser);
 

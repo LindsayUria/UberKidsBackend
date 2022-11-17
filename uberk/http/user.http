@@ -3,14 +3,15 @@
 POST http://localhost:7777/api/v1/user
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJscmFtaXJleiIsInJvbGVzIjpbIkNSRUFSX1VTVUFSSU8iXSwiaXNzIjoidWNiIiwicmVmcmVzaCI6ZmFsc2UsImV4cCI6MTY2Nzk2MTAyN30.RfG54w8p2y5yFTi3K5Ysx6p0Kyai8afEX7VfLWECe4E
 
 {
-  "username": "admin2",
-  "name": "test",
-  "lastname": "test",
+  "username": "student1",
+  "name": "test1",
+  "lastname": "test1",
   "password": "123456",
-  "email": "test@gmail.com",
-  "phone": "33424244"
+  "email": "test1@gmail.com",
+  "phone": "334242233"
 }
 
 ### Consultamos el usuario authenticado

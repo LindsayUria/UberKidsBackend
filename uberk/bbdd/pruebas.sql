@@ -158,3 +158,25 @@ UPDATE uk_user
 SET user_name='admin1'
 WHERE user_id=1;
 
+UPDATE uk_user
+SET user_name='admin2'
+WHERE user_id=35;
+
+UPDATE uk_user
+SET password='$2a$12$pigNJzj3QRUXc6LiG7YF2Oi.oC3fEPFB4sOkSm1nAmp6UzWlbZhEm'
+WHERE user_id=1;
+
+SELECT DISTINCT role.role_id, role.name, role.status, role.tx_date, role.tx_username, role.tx_host
+FROM uk_role role
+         JOIN uk_role_group role_group ON role_group.role_id = role.role_id
+         JOIN uk_group_user group_user ON group_user.group_id = role_group.group_id
+         JOIN uk_user usr ON usr.user_id = group_user.user_id
+WHERE usr.user_name = 'admin1'
+  AND role.status = true
+  AND role_group.status = true
+  AND group_user.status = true
+  AND usr.status = true;
+
+UPDATE uk_user
+SET password='$2a$12$pigNJzj3QRUXc6LiG7YF2Oi.oC3fEPFB4sOkSm1nAmp6UzWlbZhEm'
+WHERE user_id=3;
