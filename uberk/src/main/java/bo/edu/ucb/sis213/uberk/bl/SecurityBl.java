@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 
+//Logica de negocio
+
 @Service
 public class SecurityBl {
 

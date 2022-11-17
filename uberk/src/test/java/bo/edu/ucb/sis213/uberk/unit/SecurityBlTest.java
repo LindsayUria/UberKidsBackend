@@ -13,9 +13,9 @@ public class SecurityBlTest {
     @Test
     void successfulAuthentication() {
 //        // Implementación falsa
-        //UserDao userDao = Mockito.mock(UserDao.class);
+          UserDao userDao = Mockito.mock(UserDao.class);
 //        // Nosotros sabemos que para esta prueba se necesita:
-//        // userDao.findByUsernameAndPassword(credentials.username());
+//        userDao.findByUsernameAndPassword(credentials.username());
 //        // Debido a que es prueba unitaria debemos crear el comportamiento de lo que va a hacer el mock
 //        // Cuando se llame a findByUsernameAndPassword con el argumento "admin"
 //        Mockito.when(userDao.findSecretByUsername("admin"))

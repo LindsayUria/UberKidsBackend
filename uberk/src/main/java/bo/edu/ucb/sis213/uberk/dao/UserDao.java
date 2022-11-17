@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Insert;
 import org.springframework.stereotype.Component;
 
+//Consultas sql de la base de datos
+
 @Component
 public interface UserDao {
 

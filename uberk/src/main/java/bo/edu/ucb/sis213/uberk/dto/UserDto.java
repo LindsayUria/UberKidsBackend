@@ -1,5 +1,6 @@
 package bo.edu.ucb.sis213.uberk.dto;
-
+//es la seccion de extraccion de datos necesarios para
+//la consulta de la api
 public class UserDto {
     private Integer userId;
     private String username;

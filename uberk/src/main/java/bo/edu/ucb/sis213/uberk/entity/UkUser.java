@@ -2,7 +2,8 @@ package bo.edu.ucb.sis213.uberk.entity;
 
 import java.util.Date;
 import java.util.Objects;
-
+//Es una entidad que toma todos los valores que tiene la tabla que se requiere
+//en este caso uk_user
 
 public class UkUser {
     private Integer userId;
